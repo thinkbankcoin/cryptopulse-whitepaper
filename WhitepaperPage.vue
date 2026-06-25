@@ -3,18 +3,18 @@
     <!-- Hero Section -->
     <section class="wp-hero">
       <div class="wp-hero__inner">
-        <h1 class="wp-hero__title">CRYPTOPULSE</h1>
-        <p class="wp-hero__subtitle">W H I T E P A P E R</p>
-        <p class="wp-hero__tagline">AI-Powered Web4.0 Decentralized Social Media Platform</p>
-        <p class="wp-hero__vision">Building a platform where users want to socialize, socialize effortlessly, create social value, price it, and circulate it freely</p>
-        <p class="wp-hero__version">Version 2.0 | 2026</p>
+        <h1 class="wp-hero__title">{{ $t('whitepaper.hero.title') }}</h1>
+        <p class="wp-hero__subtitle">{{ $t('whitepaper.hero.subtitle') }}</p>
+        <p class="wp-hero__tagline">{{ $t('whitepaper.hero.tagline') }}</p>
+        <p class="wp-hero__vision">{{ $t('whitepaper.hero.vision') }}</p>
+        <p class="wp-hero__version">{{ $t('whitepaper.hero.version') }}</p>
       </div>
     </section>
 
     <!-- Table of Contents -->
     <nav class="wp-toc">
       <div class="wp-container">
-        <h2 class="wp-toc__title">Table of Contents</h2>
+        <h2 class="wp-toc__title">{{ $t('whitepaper.toc.title') }}</h2>
         <ol class="wp-toc__list">
           <li v-for="item in tocItems" :key="item.id" class="wp-toc__item">
             <a :href="'#' + item.id" class="wp-toc__link" @click.prevent="scrollTo(item.id)">{{ item.label }}</a>
@@ -34,260 +34,260 @@
 
         <!-- Section 1: Executive Summary -->
         <section id="executive-summary" class="wp-section">
-          <h2 class="wp-section__title"><span class="wp-section__number">1.</span> Executive Summary</h2>
-          <p>The evolution of the internet has gone through several pivotal stages. In the <strong>Web 1.0 era</strong> (circa 1990–2004), the internet consisted of static web pages and information portals, where users were purely information consumers who could only "read" but not "write." In the <strong>Web 2.0 era</strong> (circa 2004–present), social networks and user-generated content (UGC) became central, enabling users to create, share, and interact, yet data and value remained captured unilaterally by platforms. In the <strong>Web 3.0 era</strong> (circa 2017–present), blockchain technology introduced concepts of decentralization, user data sovereignty, and token incentives, allowing users to own their digital assets and identity, though product experience and intelligence remain insufficient.</p>
-          <p><strong>Web 4.0</strong> is our definition of the next-generation internet: <strong>Web3 + AI</strong>. Building on Web3's decentralization and user sovereignty, it deeply integrates artificial intelligence to enable intelligent information matching, personalized content recommendations, and automated value discovery and circulation. In the Web 4.0 era, the internet is no longer just a tool, but an intelligent ecosystem that proactively understands user needs and assists in decision-making.</p>
-          <p><strong>CryptoPulse</strong> is a Web 4.0 decentralized social platform built on this vision. The project's core goal is: <em>to build a platform where users want to socialize, socialize effortlessly, create social value, price that value, and circulate it freely.</em> The platform achieves this through four core capabilities:</p>
+          <h2 class="wp-section__title"><span class="wp-section__number">1.</span> {{ $t('whitepaper.section1.title') }}</h2>
+          <p v-html="$t('whitepaper.section1.p1', html)"></p>
+          <p v-html="$t('whitepaper.section1.p2', html)"></p>
+          <p v-html="$t('whitepaper.section1.p3', html)"></p>
           <ul class="wp-list">
-            <li><strong>AI Intelligence Engine</strong> — helps users effortlessly discover valuable content and communities</li>
-            <li><strong>SocialFi Economic System</strong> — quantifies social behavior into priceable, tradeable economic value</li>
-            <li><strong>Decentralized Identity (DID)</strong> — ensures users own their data and social relationships</li>
-            <li><strong>Content &amp; Community Ecosystem</strong> — provides a one-stop information social hub for crypto users</li>
+            <li v-html="$t('whitepaper.section1.capability1', html)"></li>
+            <li v-html="$t('whitepaper.section1.capability2', html)"></li>
+            <li v-html="$t('whitepaper.section1.capability3', html)"></li>
+            <li v-html="$t('whitepaper.section1.capability4', html)"></li>
           </ul>
-          <p>CryptoPulse's vision is to return the value of social networks to users, driving the internet from the centralized Web2 era into the open, intelligent, and value-sharing Web 4.0 era.</p>
+          <p>{{ $t('whitepaper.section1.p4') }}</p>
         </section>
 
         <!-- Section 2: Market Background -->
         <section id="market-background" class="wp-section">
-          <h2 class="wp-section__title"><span class="wp-section__number">2.</span> Market Background &amp; Demand Analysis</h2>
+          <h2 class="wp-section__title"><span class="wp-section__number">2.</span> {{ $t('whitepaper.section2.title') }}</h2>
 
-          <h3 id="market-2-1" class="wp-section__subtitle">2.1 Structural Problems in Current Social Networks</h3>
-          <p>Global social media users have surpassed 5 billion, making social platforms one of the most critical internet infrastructures. However, existing social networks suffer from deep structural contradictions:</p>
+          <h3 id="market-2-1" class="wp-section__subtitle">{{ $t('whitepaper.section2.sub1.title') }}</h3>
+          <p>{{ $t('whitepaper.section2.sub1.intro') }}</p>
           <div class="wp-card-grid">
             <div class="wp-card">
-              <h4 class="wp-card__title">Loss of Data Sovereignty</h4>
-              <p>Core assets generated by users on social platforms — content, relationship graphs, behavioral data — are entirely stored and controlled by centralized platforms. Users cannot export their social relationships or migrate data between platforms. When accounts are banned or platforms shut down, years of accumulated social assets simply vanish.</p>
+              <h4 class="wp-card__title">{{ $t('whitepaper.section2.sub1.card1Title') }}</h4>
+              <p>{{ $t('whitepaper.section2.sub1.card1Text') }}</p>
             </div>
             <div class="wp-card">
-              <h4 class="wp-card__title">Severely Imbalanced Value Distribution</h4>
-              <p>Social platforms extract enormous revenue through advertising and data trading, while the users and creators who actually produce content and traffic receive only a tiny fraction. Most small and mid-size creators struggle to earn stable income, and the social value generated by everyday interactions is completely ignored.</p>
+              <h4 class="wp-card__title">{{ $t('whitepaper.section2.sub1.card2Title') }}</h4>
+              <p>{{ $t('whitepaper.section2.sub1.card2Text') }}</p>
             </div>
             <div class="wp-card">
-              <h4 class="wp-card__title">Algorithmic Black Box &amp; Filter Bubbles</h4>
-              <p>Platform recommendation algorithms determine what content gets seen and what voices get amplified. These algorithmic models are completely opaque — users cannot understand their logic or independently adjust their information acquisition strategies.</p>
+              <h4 class="wp-card__title">{{ $t('whitepaper.section2.sub1.card3Title') }}</h4>
+              <p>{{ $t('whitepaper.section2.sub1.card3Text') }}</p>
             </div>
             <div class="wp-card">
-              <h4 class="wp-card__title">Non-portable Social Relationships</h4>
-              <p>Follower relationships, community networks, and content histories built on one platform cannot be transferred to another. This lock-in effect makes users highly dependent on single platforms, stripping them of freedom of choice.</p>
+              <h4 class="wp-card__title">{{ $t('whitepaper.section2.sub1.card4Title') }}</h4>
+              <p>{{ $t('whitepaper.section2.sub1.card4Text') }}</p>
             </div>
           </div>
 
-          <h3 id="market-2-2" class="wp-section__subtitle">2.2 Unique Pain Points for Crypto Users</h3>
-          <p>For crypto industry users, the above problems are even more pronounced, with additional challenges:</p>
+          <h3 id="market-2-2" class="wp-section__subtitle">{{ $t('whitepaper.section2.sub2.title') }}</h3>
+          <p>{{ $t('whitepaper.section2.sub2.intro') }}</p>
           <ul class="wp-list">
-            <li><strong>Information overload</strong> — The crypto market operates 24/7, generating massive volumes of project updates, market analysis, and community discussions daily. Ordinary users struggle to filter out genuinely valuable information.</li>
-            <li><strong>Fragmented tooling</strong> — Users must switch between multiple platforms: social media for news, market tools for data, wallets for asset management, creating an extremely fragmented experience.</li>
-            <li><strong>Unmonetizable social behavior</strong> — Users' quality answers, project recommendations, and trend predictions in communities hold real value, but existing platforms provide no way to quantify or reward them.</li>
-            <li><strong>Non-accumulative identity and reputation</strong> — User contributions and reputation across different crypto communities cannot be aggregated or reused cross-platform.</li>
+            <li v-html="$t('whitepaper.section2.sub2.pain1', html)"></li>
+            <li v-html="$t('whitepaper.section2.sub2.pain2', html)"></li>
+            <li v-html="$t('whitepaper.section2.sub2.pain3', html)"></li>
+            <li v-html="$t('whitepaper.section2.sub2.pain4', html)"></li>
           </ul>
 
-          <h3 id="market-2-3" class="wp-section__subtitle">2.3 Market Demand Validation</h3>
-          <p>These problems are not theoretical speculations but real demands validated by the market:</p>
+          <h3 id="market-2-3" class="wp-section__subtitle">{{ $t('whitepaper.section2.sub3.title') }}</h3>
+          <p>{{ $t('whitepaper.section2.sub3.intro') }}</p>
           <ul class="wp-list">
-            <li>The global creator economy market is projected to reach <strong>$480 billion by 2030</strong>, indicating sustained growth in demand for content creation monetization.</li>
-            <li>Global crypto asset users have exceeded <strong>500 million</strong> and continue to grow rapidly.</li>
-            <li>Multiple projects in the decentralized social track have received capital backing, proving rising market acceptance of "user-owned data" and "social behavior value capture."</li>
-            <li>The maturation of AI technology provides a technical foundation for solving information overload. The <strong>AI + Web3</strong> combination is becoming an industry consensus direction.</li>
+            <li v-html="$t('whitepaper.section2.sub3.point1', html)"></li>
+            <li v-html="$t('whitepaper.section2.sub3.point2', html)"></li>
+            <li v-html="$t('whitepaper.section2.sub3.point3', html)"></li>
+            <li v-html="$t('whitepaper.section2.sub3.point4', html)"></li>
           </ul>
-          <p>The core market demand can be summarized as: users need a next-generation social platform that enables them to effortlessly discover valuable information, fairly earn social rewards, and truly own their data and identity. This is precisely the problem CryptoPulse is built to solve.</p>
+          <p>{{ $t('whitepaper.section2.sub3.conclusion') }}</p>
         </section>
 
         <!-- Section 3: Solution -->
         <section id="solution" class="wp-section">
-          <h2 class="wp-section__title"><span class="wp-section__number">3.</span> Solution</h2>
+          <h2 class="wp-section__title"><span class="wp-section__number">3.</span> {{ $t('whitepaper.section3.title') }}</h2>
 
-          <h3 id="solution-3-1" class="wp-section__subtitle">3.1 Overall Approach</h3>
-          <p>CryptoPulse's solution is built around one core logic: <strong>make social behavior generate value, make that value priceable, and make priced value freely circulatable.</strong></p>
-          <p>To achieve this goal, the platform has constructed six core modules forming a complete value creation and circulation loop.</p>
+          <h3 id="solution-3-1" class="wp-section__subtitle">{{ $t('whitepaper.section3.sub1.title') }}</h3>
+          <p v-html="$t('whitepaper.section3.sub1.p1', html)"></p>
+          <p>{{ $t('whitepaper.section3.sub1.p2') }}</p>
           <figure class="wp-figure">
-            <img src="./images/solution-architecture.png" alt="CryptoPulse Solution Architecture — six core modules forming a complete value creation and circulation loop" class="wp-figure__img" loading="lazy" />
-            <figcaption class="wp-figure__caption">Figure 1: CryptoPulse Solution Architecture</figcaption>
+            <img src="./images/solution-architecture.png" :alt="$t('whitepaper.section3.sub1.fig1Alt')" class="wp-figure__img" loading="lazy" />
+            <figcaption class="wp-figure__caption">{{ $t('whitepaper.section3.sub1.fig1') }}</figcaption>
           </figure>
 
-          <h3 id="solution-3-2" class="wp-section__subtitle">3.2 Four-Layer Technical Architecture</h3>
-          <p>CryptoPulse employs a modular layered architecture, from bottom to top: Blockchain Layer, Data Storage Layer, AI Intelligence Layer, and Application Layer.</p>
+          <h3 id="solution-3-2" class="wp-section__subtitle">{{ $t('whitepaper.section3.sub2.title') }}</h3>
+          <p>{{ $t('whitepaper.section3.sub2.intro') }}</p>
           <figure class="wp-figure">
-            <img src="./images/technical-architecture.png" alt="CryptoPulse Four-Layer Technical Architecture — Application Layer, AI Intelligence Layer, Data Storage Layer, and Blockchain Layer" class="wp-figure__img" loading="lazy" />
-            <figcaption class="wp-figure__caption">Figure 2: Four-Layer Technical Architecture</figcaption>
+            <img src="./images/technical-architecture.png" :alt="$t('whitepaper.section3.sub2.fig2Alt')" class="wp-figure__img" loading="lazy" />
+            <figcaption class="wp-figure__caption">{{ $t('whitepaper.section3.sub2.fig2') }}</figcaption>
           </figure>
           <div class="wp-card-grid wp-card-grid--2">
             <div class="wp-card">
-              <h4 class="wp-card__title">Blockchain Layer</h4>
-              <p>Multi-chain architecture supporting Ethereum, Solana, BNB Chain. Handles DID, asset custody, token incentive execution, and DAO on-chain governance.</p>
+              <h4 class="wp-card__title">{{ $t('whitepaper.section3.sub2.blockchainTitle') }}</h4>
+              <p>{{ $t('whitepaper.section3.sub2.blockchainText') }}</p>
             </div>
             <div class="wp-card">
-              <h4 class="wp-card__title">Data Storage Layer</h4>
-              <p>Hybrid on-chain + distributed storage. Core identity and asset data on-chain, content on IPFS, high-frequency data accelerated through distributed caching.</p>
+              <h4 class="wp-card__title">{{ $t('whitepaper.section3.sub2.storageTitle') }}</h4>
+              <p>{{ $t('whitepaper.section3.sub2.storageText') }}</p>
             </div>
             <div class="wp-card">
-              <h4 class="wp-card__title">AI Intelligence Layer</h4>
-              <p>Four modules: user interest analysis, content recommendation engine, market trend prediction, and AI Agent system.</p>
+              <h4 class="wp-card__title">{{ $t('whitepaper.section3.sub2.aiTitle') }}</h4>
+              <p>{{ $t('whitepaper.section3.sub2.aiText') }}</p>
             </div>
             <div class="wp-card">
-              <h4 class="wp-card__title">Application Layer</h4>
-              <p>User-facing interface: community system, content publishing, Web3 wallet, market data, AI assistant. Supports Web, iOS, and Android.</p>
+              <h4 class="wp-card__title">{{ $t('whitepaper.section3.sub2.appTitle') }}</h4>
+              <p>{{ $t('whitepaper.section3.sub2.appText') }}</p>
             </div>
           </div>
 
-          <h3 id="solution-3-3" class="wp-section__subtitle">3.3 Social Value Circulation Model</h3>
-          <p>The core of CryptoPulse's economic design is building a sustainable social value loop. Users generate value through social interactions, the platform prices that value through SocialFi mechanisms, and token economics enable free value circulation.</p>
+          <h3 id="solution-3-3" class="wp-section__subtitle">{{ $t('whitepaper.section3.sub3.title') }}</h3>
+          <p>{{ $t('whitepaper.section3.sub3.p1') }}</p>
           <figure class="wp-figure">
-            <img src="./images/value-circulation.png" alt="CryptoPulse Value Circulation and Social Economy Model" class="wp-figure__img" loading="lazy" />
-            <figcaption class="wp-figure__caption">Figure 3: CryptoPulse Value Circulation &amp; Social Economy Model</figcaption>
+            <img src="./images/value-circulation.png" :alt="$t('whitepaper.section3.sub3.fig3Alt')" class="wp-figure__img" loading="lazy" />
+            <figcaption class="wp-figure__caption">{{ $t('whitepaper.section3.sub3.fig3') }}</figcaption>
           </figure>
-          <p>The key to this loop: every content creation, community interaction, and social recommendation is recorded and quantified by the system. Quality social behavior earns immediate CPC token rewards while accumulating on-chain reputation, forming a positive incentive flywheel.</p>
+          <p>{{ $t('whitepaper.section3.sub3.p2') }}</p>
         </section>
 
         <!-- Section 4: Core Features -->
         <section id="core-features" class="wp-section">
-          <h2 class="wp-section__title"><span class="wp-section__number">4.</span> Core Features</h2>
-          <p>CryptoPulse's core features revolve around five major modules: AI Assistant, Social Content, Market Intelligence, SocialFi, and DID Identity System.</p>
+          <h2 class="wp-section__title"><span class="wp-section__number">4.</span> {{ $t('whitepaper.section4.title') }}</h2>
+          <p>{{ $t('whitepaper.section4.intro') }}</p>
 
-          <h3 id="features-4-1" class="wp-section__subtitle">4.1 AI Assistant</h3>
-          <h4 class="wp-section__subsubtitle">4.1.1 AI Smart Matching System</h4>
-          <p>Using machine learning and big data analytics, the system builds multi-dimensional user behavior models (interest tags, browsing history, social connections, on-chain behavior, market trends) to precisely recommend relevant communities, potential projects, quality creators, and emerging DApps. Unlike traditional platforms' closed algorithms, CryptoPulse's recommendation mechanism is more open and transparent, allowing users to independently adjust recommendation strategies.</p>
-          <h4 class="wp-section__subsubtitle">4.1.2 AI Agent</h4>
-          <p>Each user has a dedicated AI Agent that assists with: crypto market trend analysis, important news screening and push notifications, rapid project evaluation, content creation assistance (article frameworks, market analysis generation), and community dynamics tracking. The AI Agent will become the core gateway for users entering the Web 4.0 world.</p>
+          <h3 id="features-4-1" class="wp-section__subtitle">{{ $t('whitepaper.section4.ai.title') }}</h3>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.ai.matching.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.ai.matching.text') }}</p>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.ai.agent.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.ai.agent.text') }}</p>
 
-          <h3 id="features-4-2" class="wp-section__subtitle">4.2 Social Content</h3>
-          <h4 class="wp-section__subsubtitle">4.2.1 Content Creation System</h4>
-          <p>Supports text, images, short videos, external links, and other content formats. Built-in smart hashtag system improves content distribution efficiency. AI-assisted creation tools help creators produce content more efficiently.</p>
-          <h4 class="wp-section__subsubtitle">4.2.2 Web3 Square</h4>
-          <p>The platform's core information flow space, aggregating trending posts, hot topics, community events, and project AMAs. AI algorithms deliver personalized recommendations based on user interests.</p>
-          <h4 class="wp-section__subsubtitle">4.2.3 Community Interaction</h4>
-          <p>Users can join various community types — DeFi, Meme, NFT, AI, GameFi — connecting with KOLs, developers, project teams, and investors. Deep participation in ecosystem building through discussions, AMAs, and interactive events.</p>
-          <h4 class="wp-section__subsubtitle">4.2.4 KOL Leaderboard</h4>
-          <p>Evaluates creator influence based on multi-dimensional metrics including content views, engagement data, community contribution, and follower growth. Top-ranked creators receive additional CPC token incentives.</p>
+          <h3 id="features-4-2" class="wp-section__subtitle">{{ $t('whitepaper.section4.social.title') }}</h3>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.social.creation.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.social.creation.text') }}</p>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.social.square.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.social.square.text') }}</p>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.social.community.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.social.community.text') }}</p>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.social.kol.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.social.kol.text') }}</p>
 
-          <h3 id="features-4-3" class="wp-section__subtitle">4.3 Market Intelligence</h3>
-          <h4 class="wp-section__subsubtitle">4.3.1 Real-time Market Data</h4>
-          <p>Integrates mainstream crypto data platforms, providing real-time display of token prices, market cap rankings, volume changes, and trending assets. Combined with the AI analysis system for market sentiment and hotspot interpretation.</p>
-          <h4 class="wp-section__subsubtitle">4.3.2 News Feed System</h4>
-          <p>Aggregates real-time news from major global crypto media outlets, covering policy and regulation, on-chain data, project developments, and more. AI algorithms deliver personalized feeds based on user preferences.</p>
-          <h4 class="wp-section__subsubtitle">4.3.3 In-depth Research Articles</h4>
-          <p>Guided by the philosophy of "information as research," articles extend beyond events to cover background logic, potential impacts, and market expectations, approaching institutional-grade research reports.</p>
+          <h3 id="features-4-3" class="wp-section__subtitle">{{ $t('whitepaper.section4.market.title') }}</h3>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.market.data.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.market.data.text') }}</p>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.market.news.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.market.news.text') }}</p>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.market.research.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.market.research.text') }}</p>
 
-          <h3 id="features-4-4" class="wp-section__subtitle">4.4 SocialFi</h3>
-          <h4 class="wp-section__subsubtitle">4.4.1 SocialFi Toolkit</h4>
-          <p>Core SocialFi features include:</p>
+          <h3 id="features-4-4" class="wp-section__subtitle">{{ $t('whitepaper.section4.socialfi.title') }}</h3>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.socialfi.toolkit.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.socialfi.toolkit.intro') }}</p>
           <ul class="wp-list">
-            <li><strong>Referral rewards</strong> — Earn token rewards for inviting new users to the platform</li>
-            <li><strong>Creator incentives</strong> — Quality content earns CPC rewards upon community engagement</li>
-            <li><strong>Content tipping</strong> — Users can directly tip quality content creators</li>
-            <li><strong>Community growth tools</strong> — User acquisition and growth tools for projects and communities</li>
+            <li v-html="$t('whitepaper.section4.socialfi.toolkit.referral', html)"></li>
+            <li v-html="$t('whitepaper.section4.socialfi.toolkit.creator', html)"></li>
+            <li v-html="$t('whitepaper.section4.socialfi.toolkit.tipping', html)"></li>
+            <li v-html="$t('whitepaper.section4.socialfi.toolkit.growth', html)"></li>
           </ul>
-          <h4 class="wp-section__subsubtitle">4.4.2 Web3 Wallet</h4>
-          <p>Built-in multi-chain wallet system supporting CPC tokens, mainstream cryptocurrencies, and NFT asset management. Deeply integrated with social features for a unified social + finance + asset management experience.</p>
+          <h4 class="wp-section__subsubtitle">{{ $t('whitepaper.section4.socialfi.wallet.title') }}</h4>
+          <p>{{ $t('whitepaper.section4.socialfi.wallet.text') }}</p>
 
-          <h3 id="features-4-5" class="wp-section__subtitle">4.5 Decentralized Identity (DID)</h3>
-          <p>Each user possesses a unique on-chain identity that can bind wallet addresses, social accounts, NFT assets, community contribution records, and more. DID works cross-platform, maintaining unified identity and reputation records across different Web3 applications. Future expansion includes DAO governance authentication, on-chain credit systems, and cross-platform login.</p>
+          <h3 id="features-4-5" class="wp-section__subtitle">{{ $t('whitepaper.section4.did.title') }}</h3>
+          <p>{{ $t('whitepaper.section4.did.text') }}</p>
         </section>
 
         <!-- Section 5: Tokenomics -->
         <section id="tokenomics" class="wp-section">
-          <h2 class="wp-section__title"><span class="wp-section__number">5.</span> Tokenomics</h2>
-          <h3 id="token-5-1" class="wp-section__subtitle">5.1 Token Overview</h3>
+          <h2 class="wp-section__title"><span class="wp-section__number">5.</span> {{ $t('whitepaper.section5.title') }}</h2>
+          <h3 id="token-5-1" class="wp-section__subtitle">{{ $t('whitepaper.section5.overview.title') }}</h3>
           <table class="wp-table">
             <tbody>
-              <tr><td class="wp-table__label">Token Name</td><td>CryptoPulse (CPC)</td></tr>
-              <tr><td class="wp-table__label">Project Type</td><td>Crypto Media + Social Platform</td></tr>
-              <tr><td class="wp-table__label">Launch Date</td><td>H2 2026</td></tr>
-              <tr><td class="wp-table__label">Total Supply</td><td>1,000,000,000 (1 Billion)</td></tr>
-              <tr><td class="wp-table__label">Inflation</td><td>None (Fixed Cap)</td></tr>
-              <tr><td class="wp-table__label">Deflation</td><td>Platform Revenue Buyback + Burn</td></tr>
-              <tr><td class="wp-table__label">Decimals</td><td>8</td></tr>
-              <tr><td class="wp-table__label">Blockchain</td><td>ERC20 / BSC / SOL (TBD)</td></tr>
+              <tr><td class="wp-table__label">{{ $t('whitepaper.section5.overview.tokenName') }}</td><td>{{ $t('whitepaper.section5.overview.tokenNameValue') }}</td></tr>
+              <tr><td class="wp-table__label">{{ $t('whitepaper.section5.overview.projectType') }}</td><td>{{ $t('whitepaper.section5.overview.projectTypeValue') }}</td></tr>
+              <tr><td class="wp-table__label">{{ $t('whitepaper.section5.overview.launchDate') }}</td><td>{{ $t('whitepaper.section5.overview.launchDateValue') }}</td></tr>
+              <tr><td class="wp-table__label">{{ $t('whitepaper.section5.overview.totalSupply') }}</td><td>{{ $t('whitepaper.section5.overview.totalSupplyValue') }}</td></tr>
+              <tr><td class="wp-table__label">{{ $t('whitepaper.section5.overview.inflation') }}</td><td>{{ $t('whitepaper.section5.overview.inflationValue') }}</td></tr>
+              <tr><td class="wp-table__label">{{ $t('whitepaper.section5.overview.deflation') }}</td><td>{{ $t('whitepaper.section5.overview.deflationValue') }}</td></tr>
+              <tr><td class="wp-table__label">{{ $t('whitepaper.section5.overview.decimals') }}</td><td>{{ $t('whitepaper.section5.overview.decimalsValue') }}</td></tr>
+              <tr><td class="wp-table__label">{{ $t('whitepaper.section5.overview.blockchain') }}</td><td>{{ $t('whitepaper.section5.overview.blockchainValue') }}</td></tr>
             </tbody>
           </table>
-          <h3 id="token-5-2" class="wp-section__subtitle">5.2 Token Allocation &amp; Vesting</h3>
+          <h3 id="token-5-2" class="wp-section__subtitle">{{ $t('whitepaper.section5.allocation.title') }}</h3>
           <table class="wp-table wp-table--full">
             <thead>
-              <tr><th>Category</th><th>Share</th><th>Amount</th><th>Vesting Rules</th></tr>
+              <tr><th>{{ $t('whitepaper.section5.allocation.thCategory') }}</th><th>{{ $t('whitepaper.section5.allocation.thShare') }}</th><th>{{ $t('whitepaper.section5.allocation.thAmount') }}</th><th>{{ $t('whitepaper.section5.allocation.thVesting') }}</th></tr>
             </thead>
             <tbody>
-              <tr><td>Community &amp; User Incentives</td><td>35%</td><td>350M</td><td>8-year linear + algorithmic</td></tr>
-              <tr><td>Investors</td><td>20%</td><td>200M</td><td>36-month linear vesting</td></tr>
-              <tr><td>Team &amp; Core Contributors</td><td>16%</td><td>160M</td><td>36-month lock + vest</td></tr>
-              <tr><td>Ecosystem Fund</td><td>10%</td><td>100M</td><td>Project-based unlock</td></tr>
-              <tr><td>Liquidity &amp; Market</td><td>10%</td><td>100M</td><td>Partial TGE unlock</td></tr>
-              <tr><td>Platform Reserve</td><td>9%</td><td>90M</td><td>Flexible as needed</td></tr>
+              <tr><td>{{ $t('whitepaper.section5.allocation.community') }}</td><td>35%</td><td>350M</td><td>{{ $t('whitepaper.section5.allocation.communityVesting') }}</td></tr>
+              <tr><td>{{ $t('whitepaper.section5.allocation.investors') }}</td><td>20%</td><td>200M</td><td>{{ $t('whitepaper.section5.allocation.investorsVesting') }}</td></tr>
+              <tr><td>{{ $t('whitepaper.section5.allocation.team') }}</td><td>16%</td><td>160M</td><td>{{ $t('whitepaper.section5.allocation.teamVesting') }}</td></tr>
+              <tr><td>{{ $t('whitepaper.section5.allocation.ecosystem') }}</td><td>10%</td><td>100M</td><td>{{ $t('whitepaper.section5.allocation.ecosystemVesting') }}</td></tr>
+              <tr><td>{{ $t('whitepaper.section5.allocation.liquidity') }}</td><td>10%</td><td>100M</td><td>{{ $t('whitepaper.section5.allocation.liquidityVesting') }}</td></tr>
+              <tr><td>{{ $t('whitepaper.section5.allocation.reserve') }}</td><td>9%</td><td>90M</td><td>{{ $t('whitepaper.section5.allocation.reserveVesting') }}</td></tr>
             </tbody>
           </table>
-          <h3 id="token-5-3" class="wp-section__subtitle">5.3 Token Utility</h3>
+          <h3 id="token-5-3" class="wp-section__subtitle">{{ $t('whitepaper.section5.utility.title') }}</h3>
           <ul class="wp-list">
-            <li><strong>Creator rewards</strong> — Quality content earns CPC token incentives</li>
-            <li><strong>Governance voting</strong> — CPC holders participate in DAO governance decisions</li>
-            <li><strong>Platform fees</strong> — Use CPC to pay in-platform transaction fees</li>
-            <li><strong>NFT purchases</strong> — Used to acquire in-platform NFT digital assets</li>
-            <li><strong>Ecosystem services</strong> — Premium AI features, creator subscriptions, and other value-added services</li>
+            <li v-html="$t('whitepaper.section5.utility.creator', html)"></li>
+            <li v-html="$t('whitepaper.section5.utility.governance', html)"></li>
+            <li v-html="$t('whitepaper.section5.utility.fees', html)"></li>
+            <li v-html="$t('whitepaper.section5.utility.nft', html)"></li>
+            <li v-html="$t('whitepaper.section5.utility.ecosystem', html)"></li>
           </ul>
-          <h3 id="token-5-4" class="wp-section__subtitle">5.4 Buyback &amp; Deflation Model</h3>
-          <p>The platform will allocate a portion of operating revenue for periodic CPC buybacks and permanent burns, creating sustained deflation. As ecosystem scale and platform revenue grow, buyback intensity will increase progressively, providing long-term value support for the token.</p>
+          <h3 id="token-5-4" class="wp-section__subtitle">{{ $t('whitepaper.section5.buyback.title') }}</h3>
+          <p>{{ $t('whitepaper.section5.buyback.text') }}</p>
         </section>
 
         <!-- Section 6: Roadmap -->
         <section id="roadmap" class="wp-section">
-          <h2 class="wp-section__title"><span class="wp-section__number">6.</span> Roadmap</h2>
+          <h2 class="wp-section__title"><span class="wp-section__number">6.</span> {{ $t('whitepaper.section6.title') }}</h2>
           <div class="wp-roadmap">
             <div class="wp-roadmap__item">
-              <div class="wp-roadmap__year">2025</div>
-              <h3 class="wp-roadmap__phase">Foundation &amp; Seed Phase</h3>
+              <div class="wp-roadmap__year">{{ $t('whitepaper.section6.y2025.year') }}</div>
+              <h3 class="wp-roadmap__phase">{{ $t('whitepaper.section6.y2025.phase') }}</h3>
               <div class="wp-roadmap__quarters">
-                <div class="wp-roadmap__q"><strong>Q1 | Team &amp; Infrastructure Setup</strong><ul class="wp-list"><li>Complete core team assembly (engineering, marketing, operations, community, compliance)</li><li>Develop CryptoPulse PC and mobile 1.0 Beta</li></ul></div>
-                <div class="wp-roadmap__q"><strong>Q2 | Product Launch &amp; Brand Building</strong><ul class="wp-list"><li>Official website and App Beta launch</li><li>Complete brand system establishment and trademark registration</li></ul></div>
-                <div class="wp-roadmap__q"><strong>Q3 | Social Matrix &amp; User Acquisition</strong><ul class="wp-list"><li>Build full-platform social matrix across Telegram, X, Discord, YouTube</li><li>Community targets: Telegram 1M+, X followers 500K+, 3,000 core seed users</li></ul></div>
-                <div class="wp-roadmap__q"><strong>Q4 | Partnerships &amp; Content Ecosystem</strong><ul class="wp-list"><li>Establish partnerships with exchanges, media, and Web3 platforms</li><li>Launch content team for sustained quality ecosystem content production</li></ul></div>
+                <div class="wp-roadmap__q"><strong>{{ $t('whitepaper.section6.y2025.q1') }}</strong><ul class="wp-list"><li>{{ $t('whitepaper.section6.y2025.q1a') }}</li><li>{{ $t('whitepaper.section6.y2025.q1b') }}</li></ul></div>
+                <div class="wp-roadmap__q"><strong>{{ $t('whitepaper.section6.y2025.q2') }}</strong><ul class="wp-list"><li>{{ $t('whitepaper.section6.y2025.q2a') }}</li><li>{{ $t('whitepaper.section6.y2025.q2b') }}</li></ul></div>
+                <div class="wp-roadmap__q"><strong>{{ $t('whitepaper.section6.y2025.q3') }}</strong><ul class="wp-list"><li>{{ $t('whitepaper.section6.y2025.q3a') }}</li><li>{{ $t('whitepaper.section6.y2025.q3b') }}</li></ul></div>
+                <div class="wp-roadmap__q"><strong>{{ $t('whitepaper.section6.y2025.q4') }}</strong><ul class="wp-list"><li>{{ $t('whitepaper.section6.y2025.q4a') }}</li><li>{{ $t('whitepaper.section6.y2025.q4b') }}</li></ul></div>
               </div>
             </div>
             <div class="wp-roadmap__item">
-              <div class="wp-roadmap__year">2026</div>
-              <h3 class="wp-roadmap__phase">Product Upgrade &amp; Fundraising</h3>
+              <div class="wp-roadmap__year">{{ $t('whitepaper.section6.y2026.year') }}</div>
+              <h3 class="wp-roadmap__phase">{{ $t('whitepaper.section6.y2026.phase') }}</h3>
               <div class="wp-roadmap__quarters">
-                <div class="wp-roadmap__q"><strong>Q1 | Core Feature Upgrade</strong><ul class="wp-list"><li>Deliver CryptoPulse 2.0 core features</li><li>Publish complete economic model and governance framework</li></ul></div>
-                <div class="wp-roadmap__q"><strong>Q2 | User Growth &amp; Institutional Fundraising</strong><ul class="wp-list"><li>Platform-wide users exceed 2M+</li><li>Launch institutional fundraising round with strategic partnership agreements</li></ul></div>
-                <div class="wp-roadmap__q"><strong>Q3 | Private Round &amp; AI Features</strong><ul class="wp-list"><li>Launch private fundraising round, users exceed 4M+</li><li>Complete AI feature module delivery (smart recommendations, content analysis, social assistant)</li></ul></div>
-                <div class="wp-roadmap__q"><strong>Q4 | Token Launch</strong><ul class="wp-list"><li>Issue governance token, complete smart contract audit</li><li>List on at least 2 CEXs, launch decentralized governance module</li></ul></div>
+                <div class="wp-roadmap__q"><strong>{{ $t('whitepaper.section6.y2026.q1') }}</strong><ul class="wp-list"><li>{{ $t('whitepaper.section6.y2026.q1a') }}</li><li>{{ $t('whitepaper.section6.y2026.q1b') }}</li></ul></div>
+                <div class="wp-roadmap__q"><strong>{{ $t('whitepaper.section6.y2026.q2') }}</strong><ul class="wp-list"><li>{{ $t('whitepaper.section6.y2026.q2a') }}</li><li>{{ $t('whitepaper.section6.y2026.q2b') }}</li></ul></div>
+                <div class="wp-roadmap__q"><strong>{{ $t('whitepaper.section6.y2026.q3') }}</strong><ul class="wp-list"><li>{{ $t('whitepaper.section6.y2026.q3a') }}</li><li>{{ $t('whitepaper.section6.y2026.q3b') }}</li></ul></div>
+                <div class="wp-roadmap__q"><strong>{{ $t('whitepaper.section6.y2026.q4') }}</strong><ul class="wp-list"><li>{{ $t('whitepaper.section6.y2026.q4a') }}</li><li>{{ $t('whitepaper.section6.y2026.q4b') }}</li></ul></div>
               </div>
             </div>
             <div class="wp-roadmap__item">
-              <div class="wp-roadmap__year">2027</div>
-              <h3 class="wp-roadmap__phase">User Explosion &amp; Ecosystem Deepening</h3>
-              <ul class="wp-list"><li>Release v3.0 with mature community self-governance and creator economy modules</li><li>Platform-wide users exceed 10M+</li><li>Implement first token buyback and burn cycle</li><li>Launch financial derivatives module (social yield staking, NFT + Token strategies, etc.)</li></ul>
+              <div class="wp-roadmap__year">{{ $t('whitepaper.section6.y2027.year') }}</div>
+              <h3 class="wp-roadmap__phase">{{ $t('whitepaper.section6.y2027.phase') }}</h3>
+              <ul class="wp-list"><li>{{ $t('whitepaper.section6.y2027.a') }}</li><li>{{ $t('whitepaper.section6.y2027.b') }}</li><li>{{ $t('whitepaper.section6.y2027.c') }}</li><li>{{ $t('whitepaper.section6.y2027.d') }}</li></ul>
             </div>
             <div class="wp-roadmap__item">
-              <div class="wp-roadmap__year">2028</div>
-              <h3 class="wp-roadmap__phase">Becoming a Web3 Social Leader</h3>
-              <ul class="wp-list"><li>Upgrade to v4.0 with deep AI-social product architecture</li><li>Build complete AI Agent ecosystem with custom smart contract agent support</li><li>Users exceed 50M+, becoming a top-tier Web3 social platform</li></ul>
+              <div class="wp-roadmap__year">{{ $t('whitepaper.section6.y2028.year') }}</div>
+              <h3 class="wp-roadmap__phase">{{ $t('whitepaper.section6.y2028.phase') }}</h3>
+              <ul class="wp-list"><li>{{ $t('whitepaper.section6.y2028.a') }}</li><li>{{ $t('whitepaper.section6.y2028.b') }}</li><li>{{ $t('whitepaper.section6.y2028.c') }}</li></ul>
             </div>
           </div>
         </section>
 
         <!-- Section 7: Long-term Vision -->
         <section id="long-term-vision" class="wp-section">
-          <h2 class="wp-section__title"><span class="wp-section__number">7.</span> Long-term Vision</h2>
-          <p>CryptoPulse's long-term goal is to become the <strong>Web3 social infrastructure layer</strong>, connecting global users, creators, communities, and the crypto project ecosystem.</p>
-          <p>The future ecosystem will span DeFi, NFT, GameFi, AI Agent, Creator Economy, and more. Through open APIs, developers can freely build applications on CryptoPulse.</p>
-          <p>Key development directions include:</p>
+          <h2 class="wp-section__title"><span class="wp-section__number">7.</span> {{ $t('whitepaper.section7.title') }}</h2>
+          <p v-html="$t('whitepaper.section7.p1', html)"></p>
+          <p>{{ $t('whitepaper.section7.p2') }}</p>
+          <p>{{ $t('whitepaper.section7.p3') }}</p>
           <ul class="wp-list">
-            <li><strong>Global community building</strong> — Integrating 1,000+ Web3 communities with continued global ecosystem expansion</li>
-            <li><strong>AI content ecosystem</strong> — Building an AI-driven next-generation content creation and distribution system</li>
-            <li><strong>Web3 entertainment</strong> — Exploring new content formats combining social + gamification + entertainment</li>
-            <li><strong>Developer ecosystem</strong> — Opening SDKs and APIs for third-party application ecosystem development</li>
+            <li v-html="$t('whitepaper.section7.dir1', html)"></li>
+            <li v-html="$t('whitepaper.section7.dir2', html)"></li>
+            <li v-html="$t('whitepaper.section7.dir3', html)"></li>
+            <li v-html="$t('whitepaper.section7.dir4', html)"></li>
           </ul>
-          <p>In this network: users own their data and identity, creators earn fair value returns, communities connect and collaborate freely, and AI becomes everyone's digital assistant.</p>
-          <p>CryptoPulse's mission is to make social networks more open, intelligent, and fair, driving the internet from the Web 2.0 era into the Web 4.0 era.</p>
+          <p>{{ $t('whitepaper.section7.p4') }}</p>
+          <p>{{ $t('whitepaper.section7.p5') }}</p>
         </section>
 
         <!-- Section 8: Team & Partnerships -->
         <section id="team" class="wp-section">
-          <h2 class="wp-section__title"><span class="wp-section__number">8.</span> Team &amp; Partnerships</h2>
-          <p>The CryptoPulse team brings together experienced professionals from blockchain, AI, social media, and fintech industries, committed to building the next-generation Web3 social platform.</p>
+          <h2 class="wp-section__title"><span class="wp-section__number">8.</span> {{ $t('whitepaper.section8.title') }}</h2>
+          <p>{{ $t('whitepaper.section8.text') }}</p>
         </section>
 
         <!-- Disclaimer -->
         <section id="disclaimer" class="wp-section wp-section--disclaimer">
-          <h2 class="wp-section__title">Disclaimer</h2>
-          <p>This whitepaper is for informational purposes only and does not constitute investment advice or any form of commitment. The CryptoPulse team reserves the right to modify and update the contents of this document based on project development. Crypto assets are highly volatile and risky. Please make independent judgments after fully understanding the relevant risks.</p>
+          <h2 class="wp-section__title">{{ $t('whitepaper.disclaimer.title') }}</h2>
+          <p>{{ $t('whitepaper.disclaimer.text') }}</p>
         </section>
 
       </div>
@@ -300,40 +300,62 @@ export default {
   name: 'WhitepaperPage',
   metaInfo() {
     return {
-      title: 'CryptoPulse Whitepaper — Tokenomics, Roadmap & Technical Architecture',
+      title: 'CryptoPulse Whitepaper',
     }
   },
   data() {
     return {
-      tocItems: [
-        { id: 'executive-summary', label: '1. Executive Summary' },
-        { id: 'market-background', label: '2. Market Background & Demand Analysis', children: [
-          { id: 'market-2-1', label: '2.1 Structural Problems in Current Social Networks' },
-          { id: 'market-2-2', label: '2.2 Unique Pain Points for Crypto Users' },
-          { id: 'market-2-3', label: '2.3 Market Demand Validation' },
+      html: {
+        bold: '<strong>',
+        boldEnd: '</strong>',
+        web1Start: '<strong>',
+        web1End: '</strong>',
+        web2Start: '<strong>',
+        web2End: '</strong>',
+        web3Start: '<strong>',
+        web3End: '</strong>',
+        web4Start: '<strong>',
+        web4End: '</strong>',
+        aiStart: '<strong>',
+        aiEnd: '</strong>',
+        cpStart: '<strong>',
+        cpEnd: '</strong>',
+        emStart: '<em>',
+        emEnd: '</em>',
+      }
+    }
+  },
+  computed: {
+    tocItems() {
+      return [
+        { id: 'executive-summary', label: this.$t('whitepaper.tocItems.s1') },
+        { id: 'market-background', label: this.$t('whitepaper.tocItems.s2'), children: [
+          { id: 'market-2-1', label: this.$t('whitepaper.tocItems.s2_1') },
+          { id: 'market-2-2', label: this.$t('whitepaper.tocItems.s2_2') },
+          { id: 'market-2-3', label: this.$t('whitepaper.tocItems.s2_3') },
         ]},
-        { id: 'solution', label: '3. Solution', children: [
-          { id: 'solution-3-1', label: '3.1 Overall Approach' },
-          { id: 'solution-3-2', label: '3.2 Four-Layer Technical Architecture' },
-          { id: 'solution-3-3', label: '3.3 Social Value Circulation Model' },
+        { id: 'solution', label: this.$t('whitepaper.tocItems.s3'), children: [
+          { id: 'solution-3-1', label: this.$t('whitepaper.tocItems.s3_1') },
+          { id: 'solution-3-2', label: this.$t('whitepaper.tocItems.s3_2') },
+          { id: 'solution-3-3', label: this.$t('whitepaper.tocItems.s3_3') },
         ]},
-        { id: 'core-features', label: '4. Core Features', children: [
-          { id: 'features-4-1', label: '4.1 AI Assistant' },
-          { id: 'features-4-2', label: '4.2 Social Content' },
-          { id: 'features-4-3', label: '4.3 Market Intelligence' },
-          { id: 'features-4-4', label: '4.4 SocialFi' },
-          { id: 'features-4-5', label: '4.5 Decentralized Identity (DID)' },
+        { id: 'core-features', label: this.$t('whitepaper.tocItems.s4'), children: [
+          { id: 'features-4-1', label: this.$t('whitepaper.tocItems.s4_1') },
+          { id: 'features-4-2', label: this.$t('whitepaper.tocItems.s4_2') },
+          { id: 'features-4-3', label: this.$t('whitepaper.tocItems.s4_3') },
+          { id: 'features-4-4', label: this.$t('whitepaper.tocItems.s4_4') },
+          { id: 'features-4-5', label: this.$t('whitepaper.tocItems.s4_5') },
         ]},
-        { id: 'tokenomics', label: '5. Tokenomics', children: [
-          { id: 'token-5-1', label: '5.1 Token Overview' },
-          { id: 'token-5-2', label: '5.2 Token Allocation & Vesting' },
-          { id: 'token-5-3', label: '5.3 Token Utility' },
-          { id: 'token-5-4', label: '5.4 Buyback & Deflation Model' },
+        { id: 'tokenomics', label: this.$t('whitepaper.tocItems.s5'), children: [
+          { id: 'token-5-1', label: this.$t('whitepaper.tocItems.s5_1') },
+          { id: 'token-5-2', label: this.$t('whitepaper.tocItems.s5_2') },
+          { id: 'token-5-3', label: this.$t('whitepaper.tocItems.s5_3') },
+          { id: 'token-5-4', label: this.$t('whitepaper.tocItems.s5_4') },
         ]},
-        { id: 'roadmap', label: '6. Roadmap' },
-        { id: 'long-term-vision', label: '7. Long-term Vision' },
-        { id: 'team', label: '8. Team & Partnerships' },
-        { id: 'disclaimer', label: 'Disclaimer' },
+        { id: 'roadmap', label: this.$t('whitepaper.tocItems.s6') },
+        { id: 'long-term-vision', label: this.$t('whitepaper.tocItems.s7') },
+        { id: 'team', label: this.$t('whitepaper.tocItems.s8') },
+        { id: 'disclaimer', label: this.$t('whitepaper.tocItems.disclaimer') },
       ]
     }
   },
